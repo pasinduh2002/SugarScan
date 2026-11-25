@@ -1,100 +1,139 @@
-# Sugar Scan — AI Diabetes Prediction & Clinical Screening Engine
-**Engineered by Pasindu Harsha for CircuitWave Labs**
+# 🩺 Sugar Scan — AI Diabetes Prediction & Clinical Screening Engine
 
-**Sugar Scan** is a static machine learning web application built with **React (Vite) + Tailwind CSS + Lucide Icons + Recharts**. It runs machine learning classification directly in the browser's JavaScript runtime with **zero server dependencies, 0ms backend latency, and 100% patient data privacy**.
+### Engineered by Pasindu Harsha for CircuitWave Labs
 
----
-
-## ⚡ Key Highlights
-
-- **Static Client-Side ML**: Logistic Regression, Linear SVM (Platt Calibrated), and Random Forest trees execute in pure JavaScript inside the browser via `public/model.json`.
-- **Zero Python Server Needed**: Exported once from `diabetes.csv` using `export_model.py`.
-- **Interactive Dual Inputs**: Every clinical biomarker features synchronized range sliders and precise numeric steppers (+ / - buttons).
-- **Live Prediction Mode**: Real-time risk probability gauge updates continuously as sliders move.
-- **Biomarker Contribution Analysis**: Directional impact chart visualizing exactly which patient biomarkers increased or decreased risk.
-- **One-Click Clinical Patient Profiles**: 4 pre-configured patient profiles for immediate demonstration.
-- **Comprehensive Dataset Dashboard**: Real-time PapaParse dataset analysis with parametric summary tables, outcome breakdown pie chart, and biomarker histograms.
-- **Attribution & Credits**:
-  - Hero & Sidebar Header: `CircuitWave Labs`
-  - Credit Line: `Made by Pasindu Harsha — for CircuitWave Labs`
-  - Footer Disclaimer: `For educational purposes only. Not medical advice.`
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Logistic%20Regression%20%7C%20SVM%20%7C%20Random%20Forest-blue)
+![React](https://img.shields.io/badge/Frontend-React%20%2B%20Vite-61DAFB)
+![Privacy](https://img.shields.io/badge/Data%20Privacy-100%25%20Client%20Side-green)
+![License](https://img.shields.io/badge/Purpose-Educational-orange)
 
 ---
 
-## 🚀 Quick Start (Run Locally)
+## 📌 Overview
 
-### Option 1: One-Click Launch (Windows)
-Double-click `run_sugar_scan_react.bat` in the project root. It will automatically start the Vite dev server and open `http://localhost:5173` in your default browser.
+**Sugar Scan** is an AI-powered diabetes risk prediction and clinical screening web application that uses machine learning classification models to estimate diabetes risk based on patient health parameters.
 
-### Option 2: Command Line
+The application performs **fully client-side machine learning inference**, meaning prediction runs directly inside the user's browser without requiring a backend server.
 
-1. **(Optional) Re-export Machine Learning Models**:
-   ```bash
-   python export_model.py
-   ```
-   *Trains the models on `diabetes.csv` and serializes parameters to `public/model.json`.*
+### Key Concept
 
-2. **Install Dependencies**:
-   ```bash
-   npm install
-   ```
-
-3. **Start Development Server**:
-   ```bash
-   npm run dev
-   ```
-   Visit **http://localhost:5173** in your browser.
-
-4. **Production Build**:
-   ```bash
-   npm run build
-   ```
-   Generates a standalone, static distribution in the `dist/` directory.
+and executed using JavaScript.
 
 ---
 
-## 🌐 Deploy to Netlify (100% Free Hosting)
+# 🧠 Machine Learning Models
 
-### Method A: Drag & Drop (Instant — 30 Seconds)
-1. Run `npm run build` to generate the `dist` folder.
-2. Go to **[app.netlify.com/drop](https://app.netlify.com/drop)**.
-3. Drag and drop the `dist/` folder into the browser window.
-4. Your static application is immediately live on a custom `.netlify.app` URL with free SSL!
+Sugar Scan supports multiple classification algorithms:
 
-### Method B: Git Repository Deployment
-1. Push this repository to GitHub.
-2. In Netlify, click **"Add new site"** &rarr; **"Import an existing project"** &rarr; Select your GitHub repository.
-3. Netlify will automatically detect `netlify.toml` with:
-   - **Build command**: `npm run build`
-   - **Publish directory**: `dist`
-4. Click **Deploy**. Any future commit to `main` will automatically build and publish!
+## 1. Logistic Regression
 
----
+Used for:
 
-## 🔬 How the Zero-Server ML Works
+- Binary diabetes classification
+- Probability estimation
+- Feature contribution analysis
 
-1. **Python Training (`export_model.py`)**:
-   - Reads `diabetes.csv` and partitions data into an 80/20 train/test split with stratification.
-   - Computes parametric standardization factors using `StandardScaler` fitted strictly on training data (`mean_` and `scale_`).
-   - Trains:
-     - **Logistic Regression**: Coefficients and intercept.
-     - **Linear SVM**: Weight vector, bias, and Platt scaling parameters (`probA`, `probB`).
-     - **Random Forest**: Serializes 40 decision trees (`children_left`, `children_right`, `threshold`, and leaf vote counts).
-   - Bundles all matrices, evaluation metrics, and comparison stats into `public/model.json`.
+Stored parameters:
 
-2. **Client-Side Inference (`src/utils/mlEngine.js`)**:
-   - Fetches `model.json` once on application load.
-   - Standardizes user inputs: `z_i = (x_i - mean_i) / scale_i`.
-   - Evaluates the chosen model:
-     - **Logistic Regression**: Sigmoid function `1 / (1 + exp(-z))`.
-     - **Linear SVM**: Calibrated decision hyperplane score.
-     - **Random Forest**: Recursive binary decision tree traversals with ensemble voting.
-   - Calculates relative feature impact scores to explain the prediction transparently.
+- Coefficients
+- Intercept
+- Scaling parameters
+
 
 ---
 
-## ⚖️ License & Disclaimer
+## 2. Linear Support Vector Machine (SVM)
 
-**Educational Notice**: This tool is designed strictly for educational, research, and portfolio demonstration purposes. It does not provide clinical diagnoses or replace professional medical consultations.
+Implemented with probability calibration.
 
-&copy; CircuitWave Labs &bull; Made by **Pasindu Harsha**
+Stored parameters:
+
+- Weight vector
+- Bias value
+- Calibration parameters
+
+
+---
+
+## 3. Random Forest
+
+Ensemble learning model using multiple decision trees.
+
+Stored information:
+
+- Decision tree structures
+- Node thresholds
+- Child relationships
+- Leaf predictions
+
+---
+
+# 🏗️ System Architecture
+
+             Patient Input
+                  |
+                  ↓
+      React Frontend Interface
+                  |
+                  ↓
+      Feature Standardization
+                  |
+                  ↓
+          ML Inference Engine
+                  |
+   ┌──────────────┼──────────────┐
+   ↓              ↓              ↓
+
+
+---
+
+# 🩺 Patient Prediction Features
+
+Sugar Scan provides interactive clinical parameter inputs.
+
+Supported biomarkers:
+
+| Feature | Description |
+|---|---|
+| Pregnancies | Number of pregnancies |
+| Glucose | Blood glucose concentration |
+| Blood Pressure | Patient blood pressure |
+| Skin Thickness | Skin fold thickness |
+| Insulin | Insulin level |
+| BMI | Body Mass Index |
+| Diabetes Pedigree Function | Genetic diabetes risk factor |
+| Age | Patient age |
+
+---
+
+# ⚡ Interactive User Interface
+
+## Features:
+
+### 🎚️ Smart Input Controls
+
+Each medical parameter includes:
+
+- Range sliders
+- Numeric input boxes
+- Increment/decrement buttons
+
+---
+
+### 🔴 Live Prediction Mode
+
+Prediction updates instantly when values change.
+
+Displays:
+
+- Diabetes probability percentage
+- Risk category
+- Model prediction
+
+---
+
+### 👥 Patient Demonstration Profiles
+
+Includes pre-configured patient examples for quick testing.
+
+Example:
