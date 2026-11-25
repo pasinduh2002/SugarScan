@@ -1,0 +1,100 @@
+# Sugar Scan — AI Diabetes Prediction & Clinical Screening Engine
+**Engineered by Pasindu Harsha for CircuitWave Labs**
+
+**Sugar Scan** is a static machine learning web application built with **React (Vite) + Tailwind CSS + Lucide Icons + Recharts**. It runs machine learning classification directly in the browser's JavaScript runtime with **zero server dependencies, 0ms backend latency, and 100% patient data privacy**.
+
+---
+
+## ⚡ Key Highlights
+
+- **Static Client-Side ML**: Logistic Regression, Linear SVM (Platt Calibrated), and Random Forest trees execute in pure JavaScript inside the browser via `public/model.json`.
+- **Zero Python Server Needed**: Exported once from `diabetes.csv` using `export_model.py`.
+- **Interactive Dual Inputs**: Every clinical biomarker features synchronized range sliders and precise numeric steppers (+ / - buttons).
+- **Live Prediction Mode**: Real-time risk probability gauge updates continuously as sliders move.
+- **Biomarker Contribution Analysis**: Directional impact chart visualizing exactly which patient biomarkers increased or decreased risk.
+- **One-Click Clinical Patient Profiles**: 4 pre-configured patient profiles for immediate demonstration.
+- **Comprehensive Dataset Dashboard**: Real-time PapaParse dataset analysis with parametric summary tables, outcome breakdown pie chart, and biomarker histograms.
+- **Attribution & Credits**:
+  - Hero & Sidebar Header: `CircuitWave Labs`
+  - Credit Line: `Made by Pasindu Harsha — for CircuitWave Labs`
+  - Footer Disclaimer: `For educational purposes only. Not medical advice.`
+
+---
+
+## 🚀 Quick Start (Run Locally)
+
+### Option 1: One-Click Launch (Windows)
+Double-click `run_sugar_scan_react.bat` in the project root. It will automatically start the Vite dev server and open `http://localhost:5173` in your default browser.
+
+### Option 2: Command Line
+
+1. **(Optional) Re-export Machine Learning Models**:
+   ```bash
+   python export_model.py
+   ```
+   *Trains the models on `diabetes.csv` and serializes parameters to `public/model.json`.*
+
+2. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Start Development Server**:
+   ```bash
+   npm run dev
+   ```
+   Visit **http://localhost:5173** in your browser.
+
+4. **Production Build**:
+   ```bash
+   npm run build
+   ```
+   Generates a standalone, static distribution in the `dist/` directory.
+
+---
+
+## 🌐 Deploy to Netlify (100% Free Hosting)
+
+### Method A: Drag & Drop (Instant — 30 Seconds)
+1. Run `npm run build` to generate the `dist` folder.
+2. Go to **[app.netlify.com/drop](https://app.netlify.com/drop)**.
+3. Drag and drop the `dist/` folder into the browser window.
+4. Your static application is immediately live on a custom `.netlify.app` URL with free SSL!
+
+### Method B: Git Repository Deployment
+1. Push this repository to GitHub.
+2. In Netlify, click **"Add new site"** &rarr; **"Import an existing project"** &rarr; Select your GitHub repository.
+3. Netlify will automatically detect `netlify.toml` with:
+   - **Build command**: `npm run build`
+   - **Publish directory**: `dist`
+4. Click **Deploy**. Any future commit to `main` will automatically build and publish!
+
+---
+
+## 🔬 How the Zero-Server ML Works
+
+1. **Python Training (`export_model.py`)**:
+   - Reads `diabetes.csv` and partitions data into an 80/20 train/test split with stratification.
+   - Computes parametric standardization factors using `StandardScaler` fitted strictly on training data (`mean_` and `scale_`).
+   - Trains:
+     - **Logistic Regression**: Coefficients and intercept.
+     - **Linear SVM**: Weight vector, bias, and Platt scaling parameters (`probA`, `probB`).
+     - **Random Forest**: Serializes 40 decision trees (`children_left`, `children_right`, `threshold`, and leaf vote counts).
+   - Bundles all matrices, evaluation metrics, and comparison stats into `public/model.json`.
+
+2. **Client-Side Inference (`src/utils/mlEngine.js`)**:
+   - Fetches `model.json` once on application load.
+   - Standardizes user inputs: `z_i = (x_i - mean_i) / scale_i`.
+   - Evaluates the chosen model:
+     - **Logistic Regression**: Sigmoid function `1 / (1 + exp(-z))`.
+     - **Linear SVM**: Calibrated decision hyperplane score.
+     - **Random Forest**: Recursive binary decision tree traversals with ensemble voting.
+   - Calculates relative feature impact scores to explain the prediction transparently.
+
+---
+
+## ⚖️ License & Disclaimer
+
+**Educational Notice**: This tool is designed strictly for educational, research, and portfolio demonstration purposes. It does not provide clinical diagnoses or replace professional medical consultations.
+
+&copy; CircuitWave Labs &bull; Made by **Pasindu Harsha**
