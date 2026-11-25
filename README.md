@@ -516,7 +516,7 @@ Contributions, ideas and bug reports are welcome.
  
 <div align="center">
 Pasindu Harsha
-Electronic & Telecommunication Engineering Undergraduate
+ENTC Undergraduate
 Machine Learning Engineer • Founder / Developer, CircuitWave Labs
  
 [![GitHub](https://img.shields.io/badge/GitHub-pasinduh2002-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/pasinduh2002)
