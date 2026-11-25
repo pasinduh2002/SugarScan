@@ -1,66 +1,227 @@
 # 🩺 Sugar Scan
 
-Sugar Scan is a machine learning-based diabetes risk prediction web application.
+Sugar Scan is a machine learning-based diabetes risk prediction web
+application.
 
 🌐 Live Demo: https://relaxed-caramel-9c918f.netlify.app/
 
+------------------------------------------------------------------------
+
 ## 🚀 Features
 
-- Diabetes risk prediction using Machine Learning
-- Client-side prediction (No backend required)
-- Fast and privacy-focused
-- Simple user interface
-- Model runs directly in the browser
+-   Diabetes risk prediction using Machine Learning
+-   Client-side prediction (No backend required)
+-   Fast and privacy-focused
+-   Simple and user-friendly interface
+-   Machine learning model runs directly in the browser
+
+------------------------------------------------------------------------
 
 ## 🧠 Machine Learning Workflow
 
-1. Data preprocessing
-2. Feature standardization
+### 1. Data Preprocessing
 
-\[
-z = \frac{x-\mu}{\sigma}
-\]
+-   Dataset cleaning
+-   Handling input features
+-   Preparing data for training
 
-3. Train/Test split:
-- 80% Training
-- 20% Testing
+### 2. Feature Standardization
 
-4. Model training
-5. Export trained model parameters
+All input values are standardized:
 
-Generated model:
+z = (x - μ) / σ
 
-## 📊 Model Evaluation
+Where: - x = input value - μ = training data mean - σ = standard
+deviation
 
-Models are evaluated using:
+### 3. Model Training
 
-- Accuracy
-- Precision
-- Recall
-- F1 Score
-- Confusion Matrix
+Dataset is divided using stratified splitting:
 
-## 🛠️ Technologies Used
+80% Training Data\
+20% Testing Data
 
-### Frontend
-- React.js
-- JavaScript
-- HTML/CSS
+### 4. Model Export
 
-### Machine Learning
-- Python
-- Scikit-learn
-- Pandas
-- NumPy
+Trained model parameters are exported using:
 
-### Deployment
-- Netlify
+export_model.py
 
-## 📦 Installation
+Generated file:
 
-Clone repository:
+public/model.json
 
-```bash
+------------------------------------------------------------------------
+
+# 📊 Model Evaluation
+
+Sugar Scan evaluates machine learning models using:
+
+## Accuracy
+
+Measures overall prediction correctness.
+
+## Precision
+
+Measures how many predicted diabetic cases are actually diabetic.
+
+Precision = TP / (TP + FP)
+
+## Recall
+
+Measures how many actual diabetic cases were detected.
+
+Recall = TP / (TP + FN)
+
+## F1 Score
+
+Balances precision and recall.
+
+F1 = 2 × (Precision × Recall) / (Precision + Recall)
+
+## Confusion Matrix
+
+Shows: - True Positive - True Negative - False Positive - False Negative
+
+------------------------------------------------------------------------
+
+# 🛠️ Technologies Used
+
+## Frontend
+
+-   React.js
+-   JavaScript
+-   HTML
+-   CSS
+
+## Machine Learning
+
+-   Python
+-   Scikit-learn
+-   Pandas
+-   NumPy
+
+## Deployment
+
+-   Netlify
+
+------------------------------------------------------------------------
+
+# 📦 Installation
+
+## Requirements
+
+Install: - Node.js - npm - Python 3.x
+
+## Clone Repository
+
+``` bash
 git clone https://github.com/yourusername/sugar-scan.git
-
 cd sugar-scan
+```
+
+## Install Dependencies
+
+``` bash
+npm install
+```
+
+## Run Application
+
+``` bash
+npm run dev
+```
+
+Open:
+
+http://localhost:5173
+
+------------------------------------------------------------------------
+
+# 🔄 Retrain Machine Learning Model
+
+Run:
+
+``` bash
+python export_model.py
+```
+
+Generated:
+
+public/model.json
+
+------------------------------------------------------------------------
+
+# 🏭 Production Build
+
+``` bash
+npm run build
+```
+
+Output:
+
+dist/
+
+------------------------------------------------------------------------
+
+# 🔒 Privacy Design
+
+Sugar Scan follows a privacy-first architecture.
+
+Features:
+
+✅ Prediction happens in the browser\
+✅ No patient data upload\
+✅ No database storage\
+✅ No cloud API dependency
+
+------------------------------------------------------------------------
+
+# 📁 Project Structure
+
+``` text
+Sugar-Scan/
+
+├── public/
+│   └── model.json
+│
+├── src/
+│   ├── components/
+│   ├── utils/
+│   │   └── mlEngine.js
+│   └── App.jsx
+│
+├── diabetes.csv
+├── export_model.py
+└── package.json
+```
+
+------------------------------------------------------------------------
+
+# 👨‍💻 Developer
+
+**Pasindu Harsha**
+
+Electronic & Telecommunication Engineering Undergraduate
+
+Founder / Developer
+
+**CircuitWave Labs**
+
+------------------------------------------------------------------------
+
+# ⚠️ Disclaimer
+
+Sugar Scan is developed for educational purposes, research
+demonstrations, and machine learning portfolio projects.
+
+It is not a medical diagnostic system and should not replace
+professional medical advice.
+
+------------------------------------------------------------------------
+
+# 📜 License
+
+© CircuitWave Labs
+
+Made by **Pasindu Harsha**
