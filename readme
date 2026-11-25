@@ -1,212 +1,270 @@
+<div align="center">
+
 # 🩺 Sugar Scan
 
-Sugar Scan is a machine learning-based diabetes risk prediction web
-application.
+### Machine Learning–Powered Diabetes Risk Prediction — Right in Your Browser
 
-🌐 Live Demo: https://sugar-scan-five.vercel.app/
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-Build-646CFF?logo=vite&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-F7931E?logo=scikitlearn&logoColor=white)
+![Privacy](https://img.shields.io/badge/Privacy-First-2ea44f)
+![License](https://img.shields.io/badge/©-CircuitWave%20Labs-blue)
+
+**🌐 [Live Demo → sugar-scan-five.vercel.app](https://sugar-scan-five.vercel.app/)**
+
+</div>
+
+---
+
+## 📖 Table of Contents
+
+- [About](#-about)
+- [Features](#-features)
+- [How It Works](#-how-it-works)
+- [Model Evaluation](#-model-evaluation)
+- [Tech Stack](#️-tech-stack)
+- [Getting Started](#-getting-started)
+- [Retrain the Model](#-retrain-the-model)
+- [Production Build](#-production-build)
+- [Privacy Design](#-privacy-design)
+- [Project Structure](#-project-structure)
+- [Developer](#-developer)
+- [Disclaimer](#️-disclaimer)
+- [License](#-license)
+
+---
+
+## 🔍 About
+
+**Sugar Scan** is a web application that estimates diabetes risk from a few health measurements. The trained model is exported to a small JSON file and executed **entirely client-side**, so there is no server, no database, and no data ever leaves the user's device.
+
+---
 
 ## 🚀 Features
 
--   Diabetes risk prediction using Machine Learning
--   Client-side prediction (No backend required)
--   Fast and privacy-focused
--   Simple and user-friendly interface
--   Machine learning model runs directly in the browser
+| | Feature |
+|---|---|
+| 🧠 | Diabetes risk prediction using Machine Learning |
+| ⚡ | Instant, client-side inference — no backend required |
+| 🔒 | Fast and privacy-focused |
+| 🎨 | Simple, user-friendly interface |
+| 🌐 | Model runs directly in the browser |
 
-## 🧠 Machine Learning Workflow
+---
+
+## 🧠 How It Works
+
+```text
+diabetes.csv ──► Preprocessing ──► Standardization ──► Training ──► export_model.py ──► public/model.json ──► Browser prediction
+```
 
 ### 1. Data Preprocessing
 
--   Dataset cleaning
--   Handling input features
--   Preparing data for training
+- Dataset cleaning
+- Handling input features
+- Preparing data for training
 
 ### 2. Feature Standardization
 
-All input values are standardized:
+Every input value is standardized before it reaches the model:
 
-z = (x - μ) / σ
+```text
+z = (x − μ) / σ
+```
 
-Where: - x = input value - μ = training data mean - σ = standard
-deviation
+| Symbol | Meaning |
+|:---:|---|
+| `x` | Input value |
+| `μ` | Mean of the training data |
+| `σ` | Standard deviation of the training data |
 
 ### 3. Model Training
 
-Dataset is divided using stratified splitting:
+The dataset is divided using **stratified splitting**, which keeps the diabetic / non-diabetic ratio the same in both sets:
 
-80% Training Data\
-20% Testing Data
+| Split | Share |
+|---|:---:|
+| Training data | 80% |
+| Testing data | 20% |
 
 ### 4. Model Export
 
-Trained model parameters are exported using:
+Trained model parameters are exported with:
 
-export_model.py
+```bash
+python export_model.py
+```
 
 Generated file:
 
+```text
 public/model.json
+```
 
+---
 
-# 📊 Model Evaluation
+## 📊 Model Evaluation
 
-Sugar Scan evaluates machine learning models using:
+Sugar Scan evaluates machine learning models using the following metrics.
 
-## Accuracy
+| Metric | What it tells you | Formula |
+|---|---|---|
+| **Accuracy** | Overall prediction correctness | `(TP + TN) / (TP + TN + FP + FN)` |
+| **Precision** | Of the predicted diabetic cases, how many are truly diabetic | `TP / (TP + FP)` |
+| **Recall** | Of the actual diabetic cases, how many were detected | `TP / (TP + FN)` |
+| **F1 Score** | Balance between precision and recall | `2 × (Precision × Recall) / (Precision + Recall)` |
 
-Measures overall prediction correctness.
+### Confusion Matrix
 
-## Precision
+|  | Predicted Diabetic | Predicted Non-Diabetic |
+|---|:---:|:---:|
+| **Actual Diabetic** | True Positive (TP) | False Negative (FN) |
+| **Actual Non-Diabetic** | False Positive (FP) | True Negative (TN) |
 
-Measures how many predicted diabetic cases are actually diabetic.
+---
 
-Precision = TP / (TP + FP)
+## 🛠️ Tech Stack
 
-## Recall
+**Frontend**
 
-Measures how many actual diabetic cases were detected.
+- React.js
+- JavaScript
+- HTML
+- CSS
 
-Recall = TP / (TP + FN)
+**Machine Learning**
 
-## F1 Score
+- Python
+- Scikit-learn
+- Pandas
+- NumPy
 
-Balances precision and recall.
+**Deployment**
 
-F1 = 2 × (Precision × Recall) / (Precision + Recall)
+- Vercel (live demo) — the static `dist/` build also works on Netlify
 
-## Confusion Matrix
+---
 
-Shows: - True Positive - True Negative - False Positive - False Negative
+## 📦 Getting Started
 
+### Requirements
 
-# 🛠️ Technologies Used
+- [Node.js](https://nodejs.org/)
+- npm
+- Python 3.x
 
-## Frontend
+### 1. Clone the repository
 
--   React.js
--   JavaScript
--   HTML
--   CSS
-
-## Machine Learning
-
--   Python
--   Scikit-learn
--   Pandas
--   NumPy
-
-## Deployment
-
--   Netlify
-
-
-# 📦 Installation
-
-## Requirements
-
-Install: - Node.js - npm - Python 3.x
-
-## Clone Repository
-
-``` bash
+```bash
 git clone https://github.com/yourusername/sugar-scan.git
 cd sugar-scan
 ```
 
-## Install Dependencies
+### 2. Install dependencies
 
-``` bash
+```bash
 npm install
 ```
 
-## Run Application
+### 3. Run the application
 
-``` bash
+```bash
 npm run dev
 ```
 
-Open:
+Then open:
 
+```text
 http://localhost:5173
+```
 
+---
 
-# 🔄 Retrain Machine Learning Model
+## 🔄 Retrain the Model
 
-Run:
+To retrain on `diabetes.csv` and regenerate the browser model:
 
-``` bash
+```bash
 python export_model.py
 ```
 
-Generated:
+This overwrites:
 
+```text
 public/model.json
+```
 
+---
 
-# 🏭 Production Build
+## 🏭 Production Build
 
-``` bash
+```bash
 npm run build
 ```
 
-Output:
+The optimized static site is written to:
 
+```text
 dist/
+```
 
+---
 
-# 🔒 Privacy Design
+## 🔒 Privacy Design
 
-Sugar Scan follows a privacy-first architecture.
+Sugar Scan follows a **privacy-first architecture**.
 
-Features:
+- ✅ Prediction happens in the browser
+- ✅ No patient data upload
+- ✅ No database storage
+- ✅ No cloud API dependency
 
-✅ Prediction happens in the browser\
-✅ No patient data upload\
-✅ No database storage\
-✅ No cloud API dependency
+---
 
+## 📁 Project Structure
 
-# 📁 Project Structure
-
-``` text
+```text
 Sugar-Scan/
-
+│
 ├── public/
-│   └── model.json
+│   └── model.json          # Exported model parameters
 │
 ├── src/
-│   ├── components/
+│   ├── components/         # UI components
 │   ├── utils/
-│   │   └── mlEngine.js
-│   └── App.jsx
+│   │   └── mlEngine.js     # In-browser prediction engine
+│   └── App.jsx             # Main application
 │
-├── diabetes.csv
-├── export_model.py
+├── diabetes.csv            # Training dataset
+├── export_model.py         # Trains and exports the model
 └── package.json
 ```
 
+---
 
-# 👨‍💻 Developer
+## 👨‍💻 Developer
 
 **Pasindu Harsha**
-
 Electronic & Telecommunication Engineering Undergraduate
+Founder / Developer — **CircuitWave Labs**
 
-Founder / Developer
+---
 
-**CircuitWave Labs**
+## ⚠️ Disclaimer
 
-# ⚠️ Disclaimer
+Sugar Scan is developed for **educational purposes, research demonstrations, and machine learning portfolio projects**.
 
-Sugar Scan is developed for educational purposes, research
-demonstrations, and machine learning portfolio projects.
+It is **not a medical diagnostic system** and should not replace professional medical advice.
 
-It is not a medical diagnostic system and should not replace
-professional medical advice.
+---
 
-
-# 📜 License
+## 📜 License
 
 © CircuitWave Labs
 
-Made by **Pasindu Harsha**
+<div align="center">
+
+Made with ❤️ by **Pasindu Harsha** for **CircuitWave Labs**
+
+</div>
