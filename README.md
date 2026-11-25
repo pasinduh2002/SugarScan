@@ -517,7 +517,7 @@ Contributions, ideas and bug reports are welcome.
 <div align="center">
 Pasindu Harsha
 Electronic & Telecommunication Engineering Undergraduate
-Machine Learning Engineer • Founder / Developer, **CircuitWave Labs**
+Machine Learning Engineer • Founder / Developer, CircuitWave Labs
  
 [![GitHub](https://img.shields.io/badge/GitHub-pasinduh2002-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/pasinduh2002)
 [![Email](https://img.shields.io/badge/Email-circuitwavelab@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:circuitwavelab@gmail.com)
