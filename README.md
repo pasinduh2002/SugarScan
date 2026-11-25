@@ -23,19 +23,19 @@
 <sub>No sign-up • No backend • No data leaves your device</sub>
  
 <br/>
-[**About**](#-about) •
-[**App Tour**](#-app-tour) •
-[**Features**](#-features) •
-[**How It Works**](#-how-it-works) •
-[**Evaluation**](#-model-evaluation) •
-[**Setup**](#-getting-started) •
-[**FAQ**](#-faq)
+[About](#-about) •
+[App Tour](#-app-tour) •
+[Features](#-features) •
+[How It Works](#-how-it-works) •
+[Evaluation](#-model-evaluation) •
+[Setup](#-getting-started) •
+[FAQ](#-faq)
  
 </div>
 <br/>
 ---
  
-## 📖 Table of Contents
+ 📖 Table of Contents
  
 <details>
 <summary><b>Click to expand</b></summary>
@@ -63,16 +63,16 @@
 <br/>
 ---
  
-## ✨ About
+✨ About
  
 **Sugar Scan** is a modern diabetes risk screening tool that estimates risk from eight routine health measurements, using a machine learning model that runs **entirely inside your browser**.
  
 It is trained on the **Pima Indians clinical diabetes dataset** (766 patient records, 8 parameters). The model is trained in Python, exported to a small `model.json` file, and executed on the client with JavaScript. Predictions are instant, and nothing you enter is ever uploaded or stored.
  
 <br/>
-## 🖼️ App Tour
+ 🖼️ App Tour
  
-### 🩺 Health Screener
+ 🩺 Health Screener
  
 Adjust eight health measurements with sliders or exact values and watch the risk estimate update live. Pick a model engine, load a sample patient profile, and see which biomarkers drive the result.
  
@@ -86,7 +86,7 @@ Adjust eight health measurements with sliders or exact values and watch the risk
 - **Risk card** with estimated probability and recommended next steps
 - **Key biomarker chart** showing which inputs raise or lower the risk
 <br/>
-### 📈 Clinical Data & Validation
+ 📈 Clinical Data & Validation
  
 The numbers behind the model: cohort size, accuracy, an algorithm comparison chart, a full metrics table with confusion matrices, and baseline statistics for every biomarker.
  
@@ -94,7 +94,7 @@ The numbers behind the model: cohort size, accuracy, an algorithm comparison cha
 <img src="assets/screenshot-validation.png" alt="Sugar Scan Clinical Data and Validation" width="100%"/>
 </div>
 <br/>
-### 📚 Patient Education
+ 📚 Patient Education
  
 A built-in knowledge base that explains diabetes, the difference between Type 1 and Type 2, normal reference ranges for all eight biomarkers, and lifestyle prevention tips.
  
@@ -102,7 +102,7 @@ A built-in knowledge base that explains diabetes, the difference between Type 1 
 <img src="assets/screenshot-education.png" alt="Sugar Scan Patient Education" width="100%"/>
 </div>
 <br/>
-### 🧪 About & Lab
+ 🧪 About & Lab
  
 The story behind the project, its privacy approach, and CircuitWave Labs.
  
@@ -110,7 +110,7 @@ The story behind the project, its privacy approach, and CircuitWave Labs.
 <img src="assets/screenshot-about.png" alt="About Sugar Scan and CircuitWave Labs" width="100%"/>
 </div>
 <br/>
-## 🚀 Features
+🚀 Features
  
 <table>
   <tr>
@@ -193,9 +193,9 @@ The story behind the project, its privacy approach, and CircuitWave Labs.
 | **Speed** | Network latency | Instant |
  
 <br/>
-## 🧠 How It Works
+ 🧠 How It Works
  
-### Training pipeline
+ Training pipeline
  
 ```mermaid
 flowchart LR
@@ -207,7 +207,7 @@ flowchart LR
     F --> G["🌐 Browser Prediction"]
 ```
  
-### What happens when you adjust a value
+ What happens when you adjust a value
  
 ```mermaid
 sequenceDiagram
@@ -280,7 +280,7 @@ Output: `public/model.json`
  
 </details>
 <br/>
-## 🧾 Input Features
+🧾 Input Features
  
 Sugar Scan uses **8 clinical parameters**, with the standard normal ranges shown in the app:
  
@@ -296,7 +296,7 @@ Sugar Scan uses **8 clinical parameters**, with the standard normal ranges shown
 | **Age** | years | Patient age | Adult (21+) |
  
 <br/>
-## 📊 Model Evaluation
+ 📊 Model Evaluation
  
 Sugar Scan evaluates models with these metrics:
  
@@ -307,7 +307,7 @@ Sugar Scan evaluates models with these metrics:
 | 📡 **Recall** | Of the actual diabetic cases, how many were detected | `TP / (TP + FN)` |
 | ⚖️ **F1 Score** | Balance between precision and recall | `2 × (P × R) / (P + R)` |
  
-### 🏆 Results
+ 🏆 Results
  
 Evaluated on an independent, stratified 20% test set (154 patients).
  
@@ -317,14 +317,14 @@ Evaluated on an independent, stratified 20% test set (154 patients).
 | **Support Vector Machine (Linear)** | **77.27%** | **63.92%** | **72.09%** | **57.41%** | 🏆 **Top performer** |
 | Random Forest | 76.62% | 60.87% | 73.68% | 51.85% | Reference |
  
-### Confusion Matrices
+ Confusion Matrices
  
 Each cell reads as TN, FP, FN, TP.
  
 | Model | TN | FP | FN | TP |
 |---|:---:|:---:|:---:|:---:|
 | Logistic Regression | 88 | 12 | 25 | 29 |
-| **Support Vector Machine (Linear)** | 88 | 12 | 23 | 31 |
+| Support Vector Machine (Linear)| 88 | 12 | 23 | 31 |
 | Random Forest | 90 | 10 | 26 | 28 |
  
 How to read a confusion matrix:
@@ -335,7 +335,7 @@ How to read a confusion matrix:
 | **Actual Non-Diabetic** | ❌ False Positive (FP) | ✅ True Negative (TN) |
  
 <br/>
-## 🛠️ Tech Stack
+🛠️ Tech Stack
  
 <table>
   <tr>
@@ -350,9 +350,9 @@ How to read a confusion matrix:
   </tr>
 </table>
 <br/>
-## 📦 Getting Started
+📦 Getting Started
  
-**Requirements:** Node.js • npm • Python 3.x
+Requirements: Node.js • npm • Python 3.x
  
 ```bash
 # 1. Clone the repository
@@ -366,7 +366,7 @@ npm install
 npm run dev
 ```
  
-Then open **http://localhost:5173** 🎉
+Then open http://localhost:5173 🎉
  
 <details>
 <summary><b>🔄 Retrain the Machine Learning Model</b></summary>
@@ -389,7 +389,7 @@ The optimized static site is written to `dist/`.
  
 </details>
 <br/>
-## ☁️ Deployment
+ ☁️ Deployment
  
 Sugar Scan is a static site, so deployment is simple.
  
@@ -412,7 +412,7 @@ Sugar Scan is a static site, so deployment is simple.
 5. Click **Deploy site**.
 </details>
 <br/>
-## 🔒 Privacy Design
+ 🔒 Privacy Design
  
 Sugar Scan is built privacy-first:
  
@@ -424,7 +424,7 @@ Sugar Scan is built privacy-first:
 | ✅ | No cloud API dependency |
  
 <br/>
-## 📁 Project Structure
+📁 Project Structure
  
 ```text
 Sugar-Scan/
@@ -445,7 +445,7 @@ Sugar-Scan/
 ```
  
 <br/>
-## 🗺️ Roadmap
+🗺️ Roadmap
  
 - [x] In-browser diabetes risk prediction
 - [x] Privacy-first, no-backend design
@@ -458,7 +458,7 @@ Sugar-Scan/
 - [ ] Downloadable result summary
 - [ ] Mobile-optimized layout improvements
 <br/>
-## ❓ FAQ
+❓ FAQ
  
 <details>
 <summary><b>Is my data sent anywhere?</b></summary>
@@ -491,7 +491,7 @@ Replace `diabetes.csv`, run `python export_model.py`, and the new `public/model.
  
 </details>
 <br/>
-## 🧯 Troubleshooting
+🧯 Troubleshooting
  
 | Problem | Fix |
 |---|---|
@@ -502,7 +502,7 @@ Replace `diabetes.csv`, run `python export_model.py`, and the new `public/model.
 | README images not showing | Check that the files exist in `assets/` with the exact names used here |
  
 <br/>
-## 🤝 Contributing
+ 🤝 Contributing
  
 Contributions, ideas and bug reports are welcome.
  
@@ -512,7 +512,7 @@ Contributions, ideas and bug reports are welcome.
 4. Push: `git push origin feature/your-feature`
 5. Open a Pull Request
 <br/>
-## 👨‍💻 Developer
+ 👨‍💻 Developer
  
 <div align="center">
 Pasindu Harsha
@@ -524,7 +524,7 @@ Machine Learning Engineer • Founder / Developer, **CircuitWave Labs**
  
 </div>
 <br/>
-## ⚠️ Disclaimer
+⚠️ Disclaimer
  
 > **Medical Notice:** Sugar Scan is built for **educational purposes, research demonstrations, and machine learning portfolio projects**.
 > It is **not a medical diagnostic system** and should not replace professional medical advice. Always consult a licensed physician for clinical diagnosis.
