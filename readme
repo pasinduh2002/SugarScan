@@ -3,9 +3,7 @@
 Sugar Scan is a machine learning-based diabetes risk prediction web
 application.
 
-🌐 Live Demo: https://relaxed-caramel-9c918f.netlify.app/
-
-------------------------------------------------------------------------
+🌐 Live Demo: https://sugar-scan-five.vercel.app/
 
 ## 🚀 Features
 
@@ -14,8 +12,6 @@ application.
 -   Fast and privacy-focused
 -   Simple and user-friendly interface
 -   Machine learning model runs directly in the browser
-
-------------------------------------------------------------------------
 
 ## 🧠 Machine Learning Workflow
 
@@ -51,7 +47,6 @@ Generated file:
 
 public/model.json
 
-------------------------------------------------------------------------
 
 # 📊 Model Evaluation
 
@@ -83,7 +78,6 @@ F1 = 2 × (Precision × Recall) / (Precision + Recall)
 
 Shows: - True Positive - True Negative - False Positive - False Negative
 
-------------------------------------------------------------------------
 
 # 🛠️ Technologies Used
 
@@ -105,7 +99,6 @@ Shows: - True Positive - True Negative - False Positive - False Negative
 
 -   Netlify
 
-------------------------------------------------------------------------
 
 # 📦 Installation
 
@@ -136,7 +129,6 @@ Open:
 
 http://localhost:5173
 
-------------------------------------------------------------------------
 
 # 🔄 Retrain Machine Learning Model
 
@@ -150,7 +142,6 @@ Generated:
 
 public/model.json
 
-------------------------------------------------------------------------
 
 # 🏭 Production Build
 
@@ -162,7 +153,6 @@ Output:
 
 dist/
 
-------------------------------------------------------------------------
 
 # 🔒 Privacy Design
 
@@ -175,7 +165,6 @@ Features:
 ✅ No database storage\
 ✅ No cloud API dependency
 
-------------------------------------------------------------------------
 
 # 📁 Project Structure
 
@@ -196,7 +185,6 @@ Sugar-Scan/
 └── package.json
 ```
 
-------------------------------------------------------------------------
 
 # 👨‍💻 Developer
 
@@ -208,8 +196,6 @@ Founder / Developer
 
 **CircuitWave Labs**
 
-------------------------------------------------------------------------
-
 # ⚠️ Disclaimer
 
 Sugar Scan is developed for educational purposes, research
@@ -218,7 +204,6 @@ demonstrations, and machine learning portfolio projects.
 It is not a medical diagnostic system and should not replace
 professional medical advice.
 
-------------------------------------------------------------------------
 
 # 📜 License
 
