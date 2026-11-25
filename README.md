@@ -10,7 +10,6 @@
 ![Pandas](https://img.shields.io/badge/Pandas-Data-150458?style=flat-square&logo=pandas&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-Math-013243?style=flat-square&logo=numpy&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-Live-000000?style=flat-square&logo=vercel&logoColor=white)
- 
 ![Best Model](https://img.shields.io/badge/Best%20Model-SVM%20(Linear)-00c2d1?style=flat-square)
 ![Accuracy](https://img.shields.io/badge/Accuracy-77.27%25-2ea44f?style=flat-square)
 ![Privacy First](https://img.shields.io/badge/Privacy-First-2ea44f?style=flat-square)
@@ -19,7 +18,7 @@
 ![Educational](https://img.shields.io/badge/Purpose-Educational-8A2BE2?style=flat-square)
  
 <br/> 
-### 🌐 [Try the Live Demo →](https://sugar-scan-five.vercel.app/)
+ 🌐 [Try the Live Demo →](https://sugar-scan-five.vercel.app/)
  
 <sub>No sign-up • No backend • No data leaves your device</sub>
  
