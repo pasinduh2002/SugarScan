@@ -17,7 +17,7 @@
 ![Runs in Browser](https://img.shields.io/badge/Runs%20in-Browser-orange?style=flat-square)
 ![Educational](https://img.shields.io/badge/Purpose-Educational-8A2BE2?style=flat-square)
  
-<br/>
+<br/> 
 ### 🌐 [**Try the Live Demo →**](https://sugar-scan-five.vercel.app/)
  
 <sub>No sign-up • No backend • No data leaves your device</sub>
@@ -515,7 +515,7 @@ Contributions, ideas and bug reports are welcome.
 # 👨‍💻 Developer
  
 <div align="center">
-**Pasindu Harsha**
+Pasindu Harsha
 Electronic & Telecommunication Engineering Undergraduate
 Machine Learning Engineer • Founder / Developer, **CircuitWave Labs**
  
@@ -536,7 +536,7 @@ Machine Learning Engineer • Founder / Developer, **CircuitWave Labs**
  
 <br/>
 <div align="center">
-⭐ **If you like this project, give it a star!** ⭐
+⭐ If you like this project, give it a star! ⭐
  
 <img src="assets/footer.svg" alt="Made by Pasindu Harsha, CircuitWave Labs" width="100%"/>
 </div>
