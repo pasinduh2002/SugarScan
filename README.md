@@ -65,9 +65,9 @@
  
 ✨ About
  
-**Sugar Scan** is a modern diabetes risk screening tool that estimates risk from eight routine health measurements, using a machine learning model that runs **entirely inside your browser**.
+Sugar Scan is a modern diabetes risk screening tool that estimates risk from eight routine health measurements, using a machine learning model that runs **entirely inside your browser**.
  
-It is trained on the **Pima Indians clinical diabetes dataset** (766 patient records, 8 parameters). The model is trained in Python, exported to a small `model.json` file, and executed on the client with JavaScript. Predictions are instant, and nothing you enter is ever uploaded or stored.
+It is trained on the Pima Indians clinical diabetes dataset (766 patient records, 8 parameters). The model is trained in Python, exported to a small `model.json` file, and executed on the client with JavaScript. Predictions are instant, and nothing you enter is ever uploaded or stored.
  
 <br/>
  🖼️ App Tour
@@ -104,7 +104,7 @@ A built-in knowledge base that explains diabetes, the difference between Type 1 
 <br/>
  🧪 About & Lab
  
-The story behind the project, its privacy approach, and CircuitWave Labs.
+The story behind the project, its privacy approach and CircuitWave Labs.
  
 <div align="center">
 <img src="assets/screenshot-about.png" alt="About Sugar Scan and CircuitWave Labs" width="100%"/>
