@@ -207,7 +207,7 @@ flowchart LR
     F --> G["🌐 Browser Prediction"]
 ```
  
-### What happens when you adjust a value
+# What happens when you adjust a value
  
 ```mermaid
 sequenceDiagram
@@ -307,7 +307,7 @@ Sugar Scan evaluates models with these metrics:
 | 📡 **Recall** | Of the actual diabetic cases, how many were detected | `TP / (TP + FN)` |
 | ⚖️ **F1 Score** | Balance between precision and recall | `2 × (P × R) / (P + R)` |
  
-### 🏆 Results
+# 🏆 Results
  
 Evaluated on an independent, stratified 20% test set (154 patients).
  
@@ -317,7 +317,7 @@ Evaluated on an independent, stratified 20% test set (154 patients).
 | **Support Vector Machine (Linear)** | **77.27%** | **63.92%** | **72.09%** | **57.41%** | 🏆 **Top performer** |
 | Random Forest | 76.62% | 60.87% | 73.68% | 51.85% | Reference |
  
-### Confusion Matrices
+# Confusion Matrices
  
 Each cell reads as TN, FP, FN, TP.
  
@@ -335,7 +335,7 @@ How to read a confusion matrix:
 | **Actual Non-Diabetic** | ❌ False Positive (FP) | ✅ True Negative (TN) |
  
 <br/>
-## 🛠️ Tech Stack
+# 🛠️ Tech Stack
  
 <table>
   <tr>
@@ -424,7 +424,7 @@ Sugar Scan is built privacy-first:
 | ✅ | No cloud API dependency |
  
 <br/>
-## 📁 Project Structure
+# 📁 Project Structure
  
 ```text
 Sugar-Scan/
@@ -445,7 +445,7 @@ Sugar-Scan/
 ```
  
 <br/>
-## 🗺️ Roadmap
+# 🗺️ Roadmap
  
 - [x] In-browser diabetes risk prediction
 - [x] Privacy-first, no-backend design
@@ -502,7 +502,7 @@ Replace `diabetes.csv`, run `python export_model.py`, and the new `public/model.
 | README images not showing | Check that the files exist in `assets/` with the exact names used here |
  
 <br/>
-## 🤝 Contributing
+# 🤝 Contributing
  
 Contributions, ideas and bug reports are welcome.
  
@@ -512,7 +512,7 @@ Contributions, ideas and bug reports are welcome.
 4. Push: `git push origin feature/your-feature`
 5. Open a Pull Request
 <br/>
-## 👨‍💻 Developer
+# 👨‍💻 Developer
  
 <div align="center">
 **Pasindu Harsha**
@@ -524,13 +524,13 @@ Machine Learning Engineer • Founder / Developer, **CircuitWave Labs**
  
 </div>
 <br/>
-## ⚠️ Disclaimer
+ ⚠️ Disclaimer
  
 > **Medical Notice:** Sugar Scan is built for **educational purposes, research demonstrations, and machine learning portfolio projects**.
 > It is **not a medical diagnostic system** and should not replace professional medical advice. Always consult a licensed physician for clinical diagnosis.
  
 <br/>
-## 📜 License
+# 📜 License
  
 © CircuitWave Labs
  
