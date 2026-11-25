@@ -18,7 +18,7 @@
 ![Educational](https://img.shields.io/badge/Purpose-Educational-8A2BE2?style=flat-square)
  
 <br/> 
-### 🌐 [**Try the Live Demo →**](https://sugar-scan-five.vercel.app/)
+### 🌐 [Try the Live Demo →](https://sugar-scan-five.vercel.app/)
  
 <sub>No sign-up • No backend • No data leaves your device</sub>
  
