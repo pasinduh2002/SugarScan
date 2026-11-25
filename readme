@@ -1,139 +1,66 @@
-# 🩺 Sugar Scan — AI Diabetes Prediction & Clinical Screening Engine
+# 🩺 Sugar Scan
 
-### Engineered by Pasindu Harsha for CircuitWave Labs
+Sugar Scan is a machine learning-based diabetes risk prediction web application.
 
-![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Logistic%20Regression%20%7C%20SVM%20%7C%20Random%20Forest-blue)
-![React](https://img.shields.io/badge/Frontend-React%20%2B%20Vite-61DAFB)
-![Privacy](https://img.shields.io/badge/Data%20Privacy-100%25%20Client%20Side-green)
-![License](https://img.shields.io/badge/Purpose-Educational-orange)
+🌐 Live Demo: https://relaxed-caramel-9c918f.netlify.app/
 
----
+## 🚀 Features
 
-## 📌 Overview
+- Diabetes risk prediction using Machine Learning
+- Client-side prediction (No backend required)
+- Fast and privacy-focused
+- Simple user interface
+- Model runs directly in the browser
 
-**Sugar Scan** is an AI-powered diabetes risk prediction and clinical screening web application that uses machine learning classification models to estimate diabetes risk based on patient health parameters.
+## 🧠 Machine Learning Workflow
 
-The application performs **fully client-side machine learning inference**, meaning prediction runs directly inside the user's browser without requiring a backend server.
+1. Data preprocessing
+2. Feature standardization
 
-### Key Concept
+\[
+z = \frac{x-\mu}{\sigma}
+\]
 
-and executed using JavaScript.
+3. Train/Test split:
+- 80% Training
+- 20% Testing
 
----
+4. Model training
+5. Export trained model parameters
 
-# 🧠 Machine Learning Models
+Generated model:
 
-Sugar Scan supports multiple classification algorithms:
+## 📊 Model Evaluation
 
-## 1. Logistic Regression
+Models are evaluated using:
 
-Used for:
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- Confusion Matrix
 
-- Binary diabetes classification
-- Probability estimation
-- Feature contribution analysis
+## 🛠️ Technologies Used
 
-Stored parameters:
+### Frontend
+- React.js
+- JavaScript
+- HTML/CSS
 
-- Coefficients
-- Intercept
-- Scaling parameters
+### Machine Learning
+- Python
+- Scikit-learn
+- Pandas
+- NumPy
 
+### Deployment
+- Netlify
 
----
+## 📦 Installation
 
-## 2. Linear Support Vector Machine (SVM)
+Clone repository:
 
-Implemented with probability calibration.
+```bash
+git clone https://github.com/yourusername/sugar-scan.git
 
-Stored parameters:
-
-- Weight vector
-- Bias value
-- Calibration parameters
-
-
----
-
-## 3. Random Forest
-
-Ensemble learning model using multiple decision trees.
-
-Stored information:
-
-- Decision tree structures
-- Node thresholds
-- Child relationships
-- Leaf predictions
-
----
-
-# 🏗️ System Architecture
-
-             Patient Input
-                  |
-                  ↓
-      React Frontend Interface
-                  |
-                  ↓
-      Feature Standardization
-                  |
-                  ↓
-          ML Inference Engine
-                  |
-   ┌──────────────┼──────────────┐
-   ↓              ↓              ↓
-
-
----
-
-# 🩺 Patient Prediction Features
-
-Sugar Scan provides interactive clinical parameter inputs.
-
-Supported biomarkers:
-
-| Feature | Description |
-|---|---|
-| Pregnancies | Number of pregnancies |
-| Glucose | Blood glucose concentration |
-| Blood Pressure | Patient blood pressure |
-| Skin Thickness | Skin fold thickness |
-| Insulin | Insulin level |
-| BMI | Body Mass Index |
-| Diabetes Pedigree Function | Genetic diabetes risk factor |
-| Age | Patient age |
-
----
-
-# ⚡ Interactive User Interface
-
-## Features:
-
-### 🎚️ Smart Input Controls
-
-Each medical parameter includes:
-
-- Range sliders
-- Numeric input boxes
-- Increment/decrement buttons
-
----
-
-### 🔴 Live Prediction Mode
-
-Prediction updates instantly when values change.
-
-Displays:
-
-- Diabetes probability percentage
-- Risk category
-- Model prediction
-
----
-
-### 👥 Patient Demonstration Profiles
-
-Includes pre-configured patient examples for quick testing.
-
-Example:
+cd sugar-scan
