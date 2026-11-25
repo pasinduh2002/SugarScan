@@ -517,7 +517,7 @@ Contributions, ideas and bug reports are welcome.
 <div align="center">
 Pasindu Harsha
 Electronic & Telecommunication Engineering Undergraduate
-Machine Learning Engineer • Founder / Developer, **CircuitWave Labs**
+Machine Learning Engineer • Founder / Developer, CircuitWave Labs
  
 [![GitHub](https://img.shields.io/badge/GitHub-pasinduh2002-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/pasinduh2002)
 [![Email](https://img.shields.io/badge/Email-circuitwavelab@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:circuitwavelab@gmail.com)
@@ -526,7 +526,7 @@ Machine Learning Engineer • Founder / Developer, **CircuitWave Labs**
 <br/>
 ⚠️ Disclaimer
  
-> **Medical Notice:** Sugar Scan is built for **educational purposes, research demonstrations, and machine learning portfolio projects**.
+> Medical Notice: Sugar Scan is built for **educational purposes, research demonstrations, and machine learning portfolio projects**.
 > It is **not a medical diagnostic system** and should not replace professional medical advice. Always consult a licensed physician for clinical diagnosis.
  
 <br/>
@@ -537,7 +537,6 @@ Machine Learning Engineer • Founder / Developer, **CircuitWave Labs**
 <br/>
 <div align="center">
 ⭐ If you like this project, give it a star! ⭐
- 
 <img src="assets/footer.svg" alt="Made by Pasindu Harsha, CircuitWave Labs" width="100%"/>
 </div>
  
